@@ -34,7 +34,7 @@ gulp.task('css', ['sass'], function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src('js/agency.js')
+  return gulp.src('js/*.js')
     .pipe(header(banner, {
       pkg: pkg
     }))
@@ -45,13 +45,13 @@ gulp.task('js', function() {
 });
 
 gulp.task('html', function() {
-  return gulp.src('index.html')
+  return gulp.src('tpl/index.html')
     .pipe(gulp.dest('dist'))
 });
 
 gulp.task('images', function() {
-  return gulp.src('./**/*')
-  .pipe(gulp.dest('dist'))
+  return gulp.src('./img/**/*')
+  .pipe(gulp.dest('dist/img'))
 });
 
 // Copy vendor files from /node_modules into /vendor
@@ -91,8 +91,9 @@ gulp.task('default', ['html', 'sass', 'css', 'js', 'images', 'copy']);
 // Configure the browserSync task
 gulp.task('browserSync', function() {
   browserSync.init({
+    startPath: "/dist",
     server: {
-      baseDir: './dist'
+      baseDir: '.'
     },
   })
 })
