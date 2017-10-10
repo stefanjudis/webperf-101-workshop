@@ -1,5 +1,7 @@
 # 07 Concat & Minify
 
+## Concat JS into two bundles and minify HTML, CSS, JS
+
 You can find possible improvements in the following commits:
 
  - [Concat vendor JS](https://github.com/stefanjudis/webperf-101-workshop-final/commit/61446db616e2ae08c3724c2d3806231706bfd0a7)

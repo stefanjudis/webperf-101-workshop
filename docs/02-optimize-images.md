@@ -1,6 +1,6 @@
 # 02 Compress images
 
-Optimize images using imagemin
+## Optimize images using imagemin
 
 You can find possible improvements in the following commits:
 
